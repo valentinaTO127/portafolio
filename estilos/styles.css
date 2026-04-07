@@ -192,7 +192,7 @@ nav a:hover {
     position: absolute;
     display: flex;
     align-items: center;
-    left: -1.1vw;
+    left: 0vw;
     z-index: 10;
 }
 
@@ -635,4 +635,193 @@ section {
 .right-align {
     gap: 2vw;
     justify-content: right;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+@media  screen and (max-width: 600px) {
+    h2 {
+        font-size: 5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3, h4 {
+        font-size: 2rem ;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    header, #cifras-seccion {
+        flex-direction: column;
+        gap: 4vh;
+        padding: 10vh 8vw;
+    }
+
+    .division50 {
+        width: 100%;
+    }
+
+    .button {
+        padding: 2vh;
+    }
+
+    header .division50 img {
+        width: 80%;
+    }
+
+    #about h3, .tarjeta-imgen-texto, #about p, .fotografia, .mini {
+        max-width: 92%;
+        width: 92%;
+    }
+
+    .tarjeta-imgen-texto {
+        gap: 4vw;
+    }
+
+    .tarjeta-imgen-texto svg {
+        width: 20%;
+        height: auto;
+    }
+
+    .tarjeta-imgen-texto div {
+        width: 80%; 
+    }
+
+    .cifras-title {
+        font-size: 1.6rem;
+        width:60%;
+        text-align: center;
+    }
+
+    .fotografia {
+        padding: 6vw 6vw 12vw;
+    }
+
+    .fotografia img, .fotografia, .testimonies {
+        border-radius: 12px;
+    }
+
+    #works {
+        gap: 4vh;
+    }
+
+    #works, #skills-philosophy, #solution, #role {
+        padding: 20vw 8vw;
+    }
+
+    .container-cards, #testimonies, #skills-philosophy, #role {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        gap: 2vh;
+        width: 92%;
+    }
+
+    #skills {
+        gap: 6vh;
+    }
+
+    .container-barras, .container-testimonies {
+        gap: 4vh;
+    }
+
+    .barra {
+        gap: 2vh;
+    }
+
+    .testimonies {
+        padding: 2vh;
+    }
+
+    .testimonies p {
+        text-align: center;
+    }
+
+    #testimonies img {
+        margin: 0 0 4vh;
+        padding: 0 30%;
+        width: 40%;
+        aspect-ratio: 1 / 1;
+    }
+
+    #contact {
+        padding: 20vw 8vw;
+    }
+
+    .contacto-icono {
+        display: flex;
+        justify-content: center;
+    }
+
+    #contact svg {
+        height: 4vh;
+        width: auto;
+    }
+
+    .about-title {
+        font-size: 3rem;
+    }
+
+    #skills-philosophy, #solution, #role {
+        gap: 16vh;
+    }
+
+    #skills-philosophy br{
+        display: none;
+    }
+
+    .cifras-about-cont {
+        margin-top: 4vh;
+        flex-wrap: wrap;
+    }
+
+    #solution {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .all-height h4 {
+        margin-bottom: 4vh;
+    }
+
+    .container-quote {
+        display: flex;
+        justify-content: center;
+    }
+
+    .quote {
+        text-align: center;
+        padding: 2vh;
+        border-radius: 12px;
+        width: 80%;
+    }
+
+    #role .division50{
+        gap: 4vh;
+    }
+    
+    #role .cifras-about-cont {
+        margin-top: 0vh;
+    }
+
+    .right-align {
+        gap: 4vh;
+    }
+
+    .no-space {
+        gap: 0;
+    }
 }
