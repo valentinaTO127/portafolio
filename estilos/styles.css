@@ -165,6 +165,13 @@ nav {
     padding: 4vh 10vw;
 }
 
+#menu-img {
+    display: none;
+    padding: 8px;
+    background-color: var(--main-color);
+    border-radius:10px;
+}
+
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -659,6 +666,29 @@ img {
 
     p {
         font-size: 1rem;
+    }
+
+    #menu-img {
+        display: block;
+        max-height: 3vh;
+        max-width: 8vw;
+    }
+
+    nav {
+        padding-left: 8vw;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 24px;
+        padding-top: 24px;
+        padding-bottom: 100vh;
+    }
+
+    nav .blanco-text {
+        color: var(--main-color);
+        text-shadow: none;
     }
 
     header, #cifras-seccion {
