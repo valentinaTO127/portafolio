@@ -216,36 +216,6 @@
         </div>
     </section>
 
-    <script>
-        //DOM elements
-        const menuButton = document.getElementById("menu-img");
-        const listaNav = document.getElementById("lista-nav");
-        const nav = document.getElementById("nav");
-
-        //Defines the status of the nav in smartphones
-        let active = false;
-
-        document.addEventListener("click", function(event) {
-            active == false? active = true : active = false;
-
-             //Nav changer and checking on the screen size
-            document.documentElement.clientWidth && window.innerWidth <= 600 ? change(active): active == false;
-                  
-        });
-
-        function change(status) {
-            //changes in styles
-            if (status) {
-                menuButton.style.display = "none";
-                listaNav.style.display = "flex";
-                nav.style.backgroundColor = "#ffffff";
-            } else {
-                menuButton.style.display = "block";
-                listaNav.style.display = "none";
-                nav.style.backgroundColor = "#ffffff00";
-            }
-            
-        }
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
