@@ -16,6 +16,8 @@ body {
   --font-titles: "Mulish", sans-serif;
   --font-texto: "Montserrat", sans-serif;
 }
+
+/*animacion para las barras*/
 @keyframes barra90 {
     0% {width: 0;}
     100% {width: 90%;}
@@ -33,6 +35,43 @@ body {
     100% {width: 95%;}
 }
 
+/* animacion para las cifras*/
+@keyframes curtain {
+   0% {height: 80%;}
+   100% {height: 0;} 
+}
+
+
+/*circles animation*/
+@keyframes height-circles-small {
+    0% {height: 2vw; }
+    50% { height: 16vw;}
+    100% {height: 2vw; }
+}
+
+@keyframes height-circles-small-serv {
+    0% {height: 2vw; }
+    100% {height: 24vw; }
+}
+
+@keyframes height-circles-big-light {
+    0% {height: 4vw; }
+    100% {height: 40vw; }
+}
+
+@keyframes height-circles-medium {
+    0% {height: 2vw; }
+    50% { height: 18vw;}
+    100% {height: 2vw; }
+}
+
+@keyframes height-circles-big-horizontal{
+    0% {height: 4vw; }
+    50% { height: 37vw;}
+    100% {height: 4vw; }
+}
+
+
 h3, h2 {
     font-family: var(--font-titles);
     font-weight: 1000;
@@ -41,6 +80,7 @@ h3, h2 {
 h2 {
     font-size: 8rem;
 }
+
 
 h3, .about-title {
     font-weight: 800;
@@ -218,7 +258,6 @@ nav a:hover {
     z-index: 10;
     max-width: 100vw;
     align-items: center;
-    box-sizing: border-box;
 }
 
 .circulos-cont-esp {
@@ -226,25 +265,49 @@ nav a:hover {
     overflow: hidden;
     position: absolute;
     right: 0vw;
-    bottom: -50vw;
+    bottom: -45vw;
     max-width: 50vw;
     height: 100vw;
 }
 
 .hero, .testimon{
+    height: 16.7vw;
     bottom: -8.5vw;
 }
 
+.hero div, .testimon div{
+    animation: height-circles-small 4s infinite;
+}
+
 .services {
+    height: 40vw;
     bottom: -20vw;
 }
 
+.services .different.visible {
+    animation: height-circles-big-light 2s;
+}
+
+.services div.visible{
+    animation: height-circles-small-serv 2s;
+}
+
 .about {
+    height: 18.8vw;
     bottom: -9.4vw;
 }
 
+.about div {
+    animation: height-circles-medium 4s infinite;
+}
+
 .work {
+    height: 37.5vw;
     bottom: -18.75vw;
+}
+
+.work div {
+    animation: height-circles-big-horizontal 4s infinite;
 }
 
 .skills{
@@ -290,6 +353,7 @@ nav a:hover {
 }
 
 
+
 section {
     box-sizing: border-box;
     max-width: 100vw;
@@ -333,7 +397,9 @@ section {
 .cifras {
     display: flex;
     flex-direction: column;
+    font-weight: 800;
     align-items: center;
+    position: relative;
 }
 
 .cifras-about-cont {
@@ -343,11 +409,27 @@ section {
 
 .number {
     font-size: 6rem;
-    font-weight: 800;
+}
+
+.curtain {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    left:0;
+    z-index: 100;
+}
+
+.curtain.visible , .cifras-about-cont .curtain.visible {
+    animation: curtain 1s ease;
+    height: 0;
 }
 
 .cifras-about-cont .number {
     font-size: 4rem;
+}
+
+.cifras-about-cont .curtain {
+    height: 80%;
 }
 
 .cifras p {
@@ -557,9 +639,8 @@ section {
 
 #barra-figma, #barra-js, #barra-css {
     width: 90%;
-    animation: barra90 2s ease-out;
-    animation-timeline: view(10% auto);
 }
+
 
 #barra-illustrator {
     width: 70%;
@@ -571,6 +652,22 @@ section {
 
 #barra-photoshop {
     width: 95%;
+}
+
+#barra-figma.visible, #barra-js.visible, #barra-css.visible {
+    animation: barra90 1.5s ease-out;
+}
+
+#barra-illustrator.visible {
+    animation: barra70 1.5s ease;
+}
+
+#barra-html.visible {
+    animation: barra85 1.5s ease;
+}
+
+#barra-photoshop.visible {
+    animation: barra95 1.5s ease;
 }
 
 #testimonies {
@@ -671,6 +768,39 @@ img {
 
 
 
+@media screen and (max-width: 1200px){
+
+    h2 {
+        font-size: 6rem;
+    }
+
+    .number {
+        font-size: 4rem;
+    }
+
+    .cifras-title {
+        font-size: 1rem;
+    }
+    
+    
+}
+
+@media screen and (max-width: 800px){
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    .number {
+        font-size: 4rem;
+    }
+
+    .cifras-title {
+        font-size: 1rem;
+    }
+}
+
+
 @media  screen and (max-width: 600px) {
     h2 {
         font-size: 5rem;
@@ -761,6 +891,18 @@ img {
         width: 92%;
     }
 
+    #services {
+        padding: 20vw 0;
+    }
+
+    #cifras-seccion {
+        padding: 36vw 8vw;
+    }
+
+    #about {
+        padding: 10vh 0;
+    }
+
     .tarjeta-imgen-texto {
         gap: 4vw;
     }
@@ -775,7 +917,7 @@ img {
     }
 
     .cifras-title {
-        font-size: 1.6rem;
+        font-size: 1rem;
         width:60%;
         text-align: center;
     }
@@ -800,6 +942,10 @@ img {
         flex-direction: column;
         align-items: center;
     }
+
+    .number {
+        font-size: 4rem;
+    } 
 
     .card {
         gap: 2vh;
