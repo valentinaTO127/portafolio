@@ -48,10 +48,15 @@ body {
     50% { height: 16vw;}
     100% {height: 2vw; }
 }
+
+@keyframes height-circles-small-serv {
+    0% {height: 2vw; }
+    100% {height: 24vw; }
+}
+
 @keyframes height-circles-big-light {
     0% {height: 4vw; }
-    50% { height: 40vw;}
-    100% {height: 4vw; }
+    100% {height: 40vw; }
 }
 
 @keyframes height-circles-medium {
@@ -75,6 +80,7 @@ h3, h2 {
 h2 {
     font-size: 8rem;
 }
+
 
 h3, .about-title {
     font-weight: 800;
@@ -269,7 +275,7 @@ nav a:hover {
     bottom: -8.5vw;
 }
 
-.hero div, .testimon div, .services div{
+.hero div, .testimon div{
     animation: height-circles-small 4s infinite;
 }
 
@@ -278,8 +284,12 @@ nav a:hover {
     bottom: -20vw;
 }
 
-.services .different {
-    animation: height-circles-big-light 4s infinite;
+.services .different.visible {
+    animation: height-circles-big-light 2s;
+}
+
+.services div.visible{
+    animation: height-circles-small-serv 2s;
 }
 
 .about {
@@ -758,6 +768,39 @@ img {
 
 
 
+@media screen and (max-width: 1200px){
+
+    h2 {
+        font-size: 6rem;
+    }
+
+    .number {
+        font-size: 4rem;
+    }
+
+    .cifras-title {
+        font-size: 1rem;
+    }
+    
+    
+}
+
+@media screen and (max-width: 800px){
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    .number {
+        font-size: 4rem;
+    }
+
+    .cifras-title {
+        font-size: 1rem;
+    }
+}
+
+
 @media  screen and (max-width: 600px) {
     h2 {
         font-size: 5rem;
@@ -848,6 +891,18 @@ img {
         width: 92%;
     }
 
+    #services {
+        padding: 20vw 0;
+    }
+
+    #cifras-seccion {
+        padding: 36vw 8vw;
+    }
+
+    #about {
+        padding: 10vh 0;
+    }
+
     .tarjeta-imgen-texto {
         gap: 4vw;
     }
@@ -862,7 +917,7 @@ img {
     }
 
     .cifras-title {
-        font-size: 1.6rem;
+        font-size: 1rem;
         width:60%;
         text-align: center;
     }
@@ -887,6 +942,10 @@ img {
         flex-direction: column;
         align-items: center;
     }
+
+    .number {
+        font-size: 4rem;
+    } 
 
     .card {
         gap: 2vh;
