@@ -17,7 +17,7 @@ menuButton.addEventListener("click", function(event) {
     active == false ? active = true : active = false;
 
      //Nav changer and checking on the screen size
-    document.documentElement.clientWidth && window.innerWidth <= 600 ? change(active): active == false;
+    document.documentElement.clientWidth && window.innerWidth <= 800 ? change(active): active == false;
                   
 });
 
@@ -26,7 +26,7 @@ listaNav.addEventListener("click", function(event) {
     active = false;
 
      //Nav changer and checking on the screen size
-    document.documentElement.clientWidth && window.innerWidth <= 600 ? change(active): active == false;
+    document.documentElement.clientWidth && window.innerWidth <= 800 ? change(active): active == false;
                   
 });
 
@@ -53,7 +53,6 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
  
     if (entry.isIntersecting) {
-        console.log(waitTime);
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
     }
@@ -70,7 +69,6 @@ circles.forEach(circle => {
     observer.observe(circle);
 });
 
-//timer (not working completely)
 for (let i = 0; i < curtains.length; i++) {
     setTimeout(() => {
         observer.observe(curtains[i]);
